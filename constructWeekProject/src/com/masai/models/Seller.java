@@ -1,23 +1,24 @@
 package com.masai.models;
 
 public class Seller {
-	String firstName;
-	String lastName;
-	String email;
-	String username;
-	String password;
-	String gender;
-	String DOB;
-	String companyName;
-	String State;
-	String City;
-	int pincode;
-	int phone;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String username;
+	private String password;
+	private String gender;
+	private String DOB;
+	private String companyName;
+	private String State;
+	private String City;
+	private int SellerId;
+	private int pincode;
+	private int phone;
 	public Seller() {
 		// TODO Auto-generated constructor stub
 	}
 	public Seller(String firstName, String lastName, String email, String username, String password, String gender,
-			String dOB, String companyName, String state, String city, int pincode, int phone) {
+			String dOB, String companyName, String state, String city, int sellerId, int pincode, int phone) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -29,6 +30,7 @@ public class Seller {
 		this.companyName = companyName;
 		State = state;
 		City = city;
+		this.SellerId = sellerId;
 		this.pincode = pincode;
 		this.phone = phone;
 	}
@@ -92,6 +94,12 @@ public class Seller {
 	public void setCity(String city) {
 		City = city;
 	}
+	public int getSellerId() {
+		return SellerId;
+	}
+	public void setBuyerId(int sellerId) {
+		SellerId = sellerId;
+	}
 	public int getPincode() {
 		return pincode;
 	}
@@ -108,8 +116,8 @@ public class Seller {
 	public String toString() {
 		return "Seller [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", username="
 				+ username + ", password=" + password + ", gender=" + gender + ", DOB=" + DOB + ", companyName="
-				+ companyName + ", State=" + State + ", City=" + City + ", pincode=" + pincode + ", phone=" + phone
-				+ "]";
+				+ companyName + ", State=" + State + ", City=" + City + ", SellerId=" + SellerId + ", pincode=" + pincode
+				+ ", phone=" + phone + "]";
 	}
 	
 }
