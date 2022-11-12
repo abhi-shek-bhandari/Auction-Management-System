@@ -7,17 +7,16 @@ public class Buyer {
 	private String username;
 	private String password;
 	private String gender;
-	private String DOB;
 	private String State;
 	private String City;
 	private int BuyerId;
 	private int pincode;
-	private int phone;
+	private String phone;
 	public Buyer() {
 		// TODO Auto-generated constructor stub
 	}
 	public Buyer(String firstName, String lastName, String email, String username, String password, String gender,
-			String dOB, String state, String city,int BuyerId, int pincode, int phone) {
+			String state, String city, int buyerId, int pincode, String phone) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -25,10 +24,9 @@ public class Buyer {
 		this.username = username;
 		this.password = password;
 		this.gender = gender;
-		this.DOB = dOB;
-		this.State = state;
-		this.City = city;
-		this.BuyerId = BuyerId;
+		State = state;
+		City = city;
+		BuyerId = buyerId;
 		this.pincode = pincode;
 		this.phone = phone;
 	}
@@ -68,23 +66,23 @@ public class Buyer {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getDOB() {
-		return DOB;
-	}
-	public void setDOB(String dOB) {
-		this.DOB = dOB;
-	}
 	public String getState() {
 		return State;
 	}
 	public void setState(String state) {
-		this.State = state;
+		State = state;
 	}
 	public String getCity() {
 		return City;
 	}
 	public void setCity(String city) {
-		this.City = city;
+		City = city;
+	}
+	public int getBuyerId() {
+		return BuyerId;
+	}
+	public void setBuyerId(int buyerId) {
+		BuyerId = buyerId;
 	}
 	public int getPincode() {
 		return pincode;
@@ -92,23 +90,17 @@ public class Buyer {
 	public void setPincode(int pincode) {
 		this.pincode = pincode;
 	}
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	@Override
 	public String toString() {
-		return "Buyer [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", username="
-				+ username + ", password=" + password + ", gender=" + gender + ", DOB=" + DOB + ", State=" + State
-				+ ", City=" + City + ", pincode=" + pincode + ", phone=" + phone + "]";
-	}
-	public int getBuyerId() {
-		return BuyerId;
-	}
-	public void setBuyerId(int buyerId) {
-		this.BuyerId = buyerId;
+		return "Buyer [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email +
+				", gender=" + gender + ", State=" + State + ", City=" + City
+				+ ", BuyerId=" + BuyerId + ", pincode=" + pincode + ", phone=" + phone + "]";
 	}
 	
 }
