@@ -7,18 +7,17 @@ public class Seller {
 	private String username;
 	private String password;
 	private String gender;
-	private String DOB;
 	private String companyName;
 	private String State;
 	private String City;
 	private int SellerId;
 	private int pincode;
-	private int phone;
+	private String phone;
 	public Seller() {
 		// TODO Auto-generated constructor stub
 	}
 	public Seller(String firstName, String lastName, String email, String username, String password, String gender,
-			String dOB, String companyName, String state, String city, int sellerId, int pincode, int phone) {
+			String companyName, String state, String city, int sellerId, int pincode, String phone) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -26,11 +25,10 @@ public class Seller {
 		this.username = username;
 		this.password = password;
 		this.gender = gender;
-		DOB = dOB;
 		this.companyName = companyName;
 		State = state;
 		City = city;
-		this.SellerId = sellerId;
+		SellerId = sellerId;
 		this.pincode = pincode;
 		this.phone = phone;
 	}
@@ -70,12 +68,6 @@ public class Seller {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getDOB() {
-		return DOB;
-	}
-	public void setDOB(String dOB) {
-		DOB = dOB;
-	}
 	public String getCompanyName() {
 		return companyName;
 	}
@@ -97,7 +89,7 @@ public class Seller {
 	public int getSellerId() {
 		return SellerId;
 	}
-	public void setBuyerId(int sellerId) {
+	public void setSellerId(int sellerId) {
 		SellerId = sellerId;
 	}
 	public int getPincode() {
@@ -106,18 +98,18 @@ public class Seller {
 	public void setPincode(int pincode) {
 		this.pincode = pincode;
 	}
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	@Override
 	public String toString() {
 		return "Seller [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", username="
-				+ username + ", password=" + password + ", gender=" + gender + ", DOB=" + DOB + ", companyName="
-				+ companyName + ", State=" + State + ", City=" + City + ", SellerId=" + SellerId + ", pincode=" + pincode
-				+ ", phone=" + phone + "]";
+				+ username + ", password=" + password + ", gender=" + gender + ", companyName=" + companyName
+				+ ", State=" + State + ", City=" + City + ", SellerId=" + SellerId + ", pincode=" + pincode + ", phone="
+				+ phone + "]";
 	}
 	
 }
