@@ -27,7 +27,7 @@ The Auction Management System is a console-based backend application designed to
 
 2. **Clone the Repository**:
    ```bash
-   git clone <https://github.com/abhi-shek-bhandari/Auction-Management-System>
+   git clone https://github.com/abhi-shek-bhandari/Auction-Management-System
    ```
 
 3. **Database Setup**:  
